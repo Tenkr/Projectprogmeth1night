@@ -22,13 +22,8 @@ public class GameConstant {
 	public static final String SPEEDY_NAME = "Speedy";
 	public static final String TOUGH_NAME = "Tough";
 	public static final String WILD_NAME = "Wild";
-	
-	public static final String KING_NAME = "King";
-	
 	public static final char MOVE_KEY = 'M';
 	public static final char ATTACK_KEY = 'A';
 	public static final char HEAL_KEY = 'H';
-	
-	
 
 }

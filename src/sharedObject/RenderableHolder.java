@@ -20,6 +20,7 @@ public class RenderableHolder {
 	// Background Images
 	public static Image gameNameBar_bg_Image;
 	public static Image board_bg_Image;
+	public static Image bg_image2;
 
 	// Sword
 	public static Image sword_Image;
@@ -245,6 +246,7 @@ public class RenderableHolder {
 		title_bg_Image = new Image(ClassLoader.getSystemResource(img + "title_bg.png").toString());
 		gameNameBar_bg_Image = new Image(ClassLoader.getSystemResource(img + "gamenamebar_bg.jpg").toString());
 		board_bg_Image = new Image(ClassLoader.getSystemResource(img + "image0.jpg").toString());
+		
 		end_bg_Image = new Image(ClassLoader.getSystemResource(img + "end_bg.jpg").toString());
 		tie_end_bg_Image = new Image(ClassLoader.getSystemResource(img + "tie_end_bg.jpg").toString());
 

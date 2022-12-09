@@ -252,7 +252,6 @@ public class PlayerNameBar extends VBox {
 				RenderableHolder.Error_Sound.play();
 			}
 		});
-
 		backButton = new ActionButton("Back");
 		backButton.setOnMouseClicked(event -> {
 			// TODO Auto-generated method stub
