@@ -31,4 +31,8 @@ public class Sprites {
 	public static final int HEAL = 26;
 	public static final int P1_DUCKED = 27;
 	public static final int P2_DUCKED = 28;
+	
+	public static final int P1_KING = 29;
+	public static final int P2_KING = 30;
+	
 }
