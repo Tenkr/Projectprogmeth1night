@@ -40,9 +40,9 @@ public class StartScreen {
 
 		// Draw title bar with game's name
 		gc.drawImage(RenderableHolder.title_bg_Image, 130, 25, 765, 175);
-		gc.setFont(Font.font("Palatino Linotype", FontWeight.BOLD, 100));
-		gc.fillText("Battle Board!", 220, 150);
-		gc.strokeText("Battle Board!", 220, 150);
+		gc.setFont(Font.font("Verdana", FontWeight.EXTRA_BOLD, 80));
+		gc.fillText("Battle Chess", 220, 150);
+		gc.strokeText("Battle Chess", 220, 150);
 	}
 
 	public void drawScene(GraphicsContext gc) {
