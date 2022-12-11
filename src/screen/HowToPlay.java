@@ -52,7 +52,7 @@ public class HowToPlay extends VBox {
 		ImageView board_img = new ImageView(RenderableHolder.board_bg_Image);
 		board_img.setFitWidth(175);
 		board_img.setPreserveRatio(true);
-		Text gameboard_description = new Text("The board has 3 components, including floor, river, and bridge.");
+		Text gameboard_description = new Text("The board has 2 components, including floor, lava.");
 		gameboard_description.setFont(Font.font("Palatino Linotype", FontWeight.SEMI_BOLD, 20));
 		gameboard_description.setWrappingWidth(220);
 		description.addRow(row_idx++, board_img, gameboard_description);

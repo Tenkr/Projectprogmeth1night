@@ -111,8 +111,8 @@ public class GameScreen {
 	}
 
 	private void drawNamePane() {
-		Text gameName = new Text("BATTLE BOARD");
-		gameName.setFont(Font.font("Times New Roman", FontWeight.BOLD, 36));
+		Text gameName = new Text("BATTLE Chess");
+		gameName.setFont(Font.font("Verdana", FontWeight.BOLD, 36));
 		gameName.setStroke(Color.SILVER);
 		namePane = new StackPane();
 		namePane.setAlignment(Pos.CENTER);

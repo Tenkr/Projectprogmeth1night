@@ -20,7 +20,7 @@ import javafx.scene.text.FontWeight;
 public class ActionButton extends Button {
 	public ActionButton(String name) {
 		super(name);
-		setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, CornerRadii.EMPTY, Insets.EMPTY)));
+		setBackground(new Background(new BackgroundFill(Color.GOLDENROD, CornerRadii.EMPTY, Insets.EMPTY)));
 		setPrefSize(300, 75);
 		setAlignment(Pos.CENTER);
 		setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
@@ -42,7 +42,7 @@ public class ActionButton extends Button {
 			@Override
 			public void handle(MouseEvent arg0) {
 				// TODO Auto-generated method stub
-				setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, CornerRadii.EMPTY, Insets.EMPTY)));
+				setBackground(new Background(new BackgroundFill(Color.GOLDENROD, CornerRadii.EMPTY, Insets.EMPTY)));
 				setEffect(null);
 			}
 		});
