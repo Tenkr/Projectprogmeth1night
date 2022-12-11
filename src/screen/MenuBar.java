@@ -4,9 +4,10 @@ import gui.base.ActionButton;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class MenuBar extends VBox {
+public class MenuBar extends HBox {
 	public Button startButton;
 	public Button howToPlayButton;
 	public Button quitButton;
