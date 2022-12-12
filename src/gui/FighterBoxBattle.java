@@ -22,7 +22,9 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 	public void draw() {
 		// TODO Auto-generated method stub
 
+
 		gc.setFill(Color.DARKKHAKI);
+
 
 		gc.fillRect(0, 0, 150, 120);
 		gc.drawImage(image, 5, 5, 70, 70);
@@ -30,7 +32,7 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 		gc.strokeText(fighter.getName(), 80, 45);
 		gc.setFill(Color.ORANGERED);
 		gc.fillRect(25, 90, 100, 20);
-		gc.strokeRect(0, 0, 150, 120);
+		gc.strokeRect(0, 0, 150, 120);;
 	}
 
 	@Override
