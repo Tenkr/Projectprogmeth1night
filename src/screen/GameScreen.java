@@ -175,7 +175,7 @@ public class GameScreen {
 
 		scene = new Scene(root, 1000, 800);
 		addListener(scene);
-		primaryStage.setTitle("Battle Board");
+		primaryStage.setTitle("Battle Chess");
 		primaryStage.setScene(scene);
 	}
 

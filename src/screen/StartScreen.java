@@ -57,7 +57,7 @@ public class StartScreen {
 		};
 		startScreenSong.start();
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("Battle Board");
+		primaryStage.setTitle("Battle Chess");
 	}
 
 	public void setMenuAction() {

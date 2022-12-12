@@ -44,7 +44,7 @@ public class GameBoard implements Updatable {
 		System.out.println("Set Default :" + GameController.getRoundCount());
 		Player1Fighters = new ArrayList<>();
 		Player2Fighters = new ArrayList<>();
-		setBoardAndMap();
+		setBoardAndMap(); 
 	}
 
 	private void setBoardAndMap() {

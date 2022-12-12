@@ -25,7 +25,7 @@ public class ActionPane extends VBox {
 	public ActionPane(boolean isHealer, int moveCount, int attackCount, int healCount) {
 		setMaxSize(400, 250);
 		setAlignment(Pos.CENTER);
-		setBackground(new Background(new BackgroundFill(Color.TAN, null, getInsets())));
+		setBackground(new Background(new BackgroundFill(Color.ORANGE, null, getInsets())));
 		setSpacing(15);
 		setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
 
