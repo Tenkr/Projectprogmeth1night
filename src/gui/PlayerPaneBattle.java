@@ -2,9 +2,11 @@ package gui;
 
 import java.util.ArrayList;
 
+import entity.KingFighter;
 import entity.base.Fighter;
 import gui.base.PlayerPane;
 import javafx.scene.Node;
+import logic.GameConstant;
 import logic.GameController;
 import logic.Updatable;
 
@@ -14,9 +16,12 @@ public class PlayerPaneBattle extends PlayerPane implements Updatable {
 	public PlayerPaneBattle(int player) {
 		super(player);
 		fighters = new ArrayList<Fighter>();
+		//addFighters(new KingFighter(GameConstant.MELEE_TYPE_STRING, player));
+	
 	}
 
 	public void addFighters(Fighter fighter) {
+
 		if (fighters.size() < 5) {
 			if (player == 1) {
 				GameController.getGameBoard().map[fighters.size()][0] = fighter.getSymbol();

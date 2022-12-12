@@ -91,7 +91,7 @@ public class GameScreen {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < GameConstant.N_ROWS; i++) {
 			for (int j = 0; j < GameConstant.N_COLS; j++) {
-				if (gameBoard.map[i][j] <= 20) {
+				if (gameBoard.map[i][j] <= 20 || gameBoard.map[i][j]==29 || gameBoard.map[i][j]==30) {
 					gameGC.drawImage(RenderableHolder.getFullBodyImage(gameBoard.map[i][j]),
 							GameConstant.ORIGIN_X + (j * GameConstant.BOX_WIDTH),
 							GameConstant.ORIGIN_Y + (i * GameConstant.BOX_HEIGHT) - 56, 100, 100);

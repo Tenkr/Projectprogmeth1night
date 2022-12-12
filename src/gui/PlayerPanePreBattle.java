@@ -1,9 +1,11 @@
 package gui;
 
+import entity.KingFighter;
 import entity.base.Fighter;
 import gui.base.PlayerPane;
 import input.InputUtility;
 import javafx.scene.input.KeyCode;
+import logic.GameConstant;
 import logic.LogicUtility;
 import logic.Updatable;
 import screen.GameScreen;
@@ -20,6 +22,7 @@ public class PlayerPanePreBattle extends PlayerPane implements Updatable {
 		for (Fighter fighter : fighters) {
 			addFighterBox(fighter);
 		}
+		//addFighterBox(new KingFighter(GameConstant.MELEE_TYPE_STRING, player));
 	}
 
 	public void addFighterBox(Fighter fighter) {

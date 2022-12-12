@@ -21,7 +21,9 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		gc.setFill(Color.LIGHTGRAY);
+
+		gc.setFill(Color.DARKKHAKI);
+
 		gc.fillRect(0, 0, 150, 120);
 		gc.drawImage(image, 5, 5, 70, 70);
 		gc.setFont(Font.font("Palatino Linotype", FontWeight.SEMI_BOLD, 20));

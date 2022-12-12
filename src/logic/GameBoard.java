@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import entity.HealerFighter;
+import entity.KingFighter;
 import entity.SpeedyFighter;
 import entity.base.Fighter;
 import entity.base.HitPointRegenerable;
@@ -44,7 +45,12 @@ public class GameBoard implements Updatable {
 		System.out.println("Set Default :" + GameController.getRoundCount());
 		Player1Fighters = new ArrayList<>();
 		Player2Fighters = new ArrayList<>();
+		
 		setBoardAndMap();
+///////////
+		addFighter(new KingFighter(GameConstant.MELEE_TYPE_STRING,1),board[2][2],GameConstant.TEAM_1);
+		addFighter(new KingFighter(GameConstant.MELEE_TYPE_STRING,2),board[2][4],GameConstant.TEAM_2);
+		///////////
 	}
 
 	private void setBoardAndMap() {

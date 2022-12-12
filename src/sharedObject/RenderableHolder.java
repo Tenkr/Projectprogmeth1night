@@ -64,6 +64,12 @@ public class RenderableHolder {
 	public static Image wildrange2_Image;
 	public static Image wildmeleehead_Image;
 	public static Image wildrangehead_Image;
+	
+	//King
+	public static Image king1_Image;
+	public static Image king2_Image;
+	public static Image kinghead_Image;
+	
 
 	// Actions
 	public static Image heal_Image;
@@ -109,7 +115,9 @@ public class RenderableHolder {
 
 	public static Image getHeadImage(int symbol) {
 		if (symbol > 10) {
-			symbol -= 10;
+			if(symbol != 29 && symbol != 30) {
+				symbol -= 10;
+			}
 		}
 		Image image = null;
 		switch (symbol) {
@@ -142,6 +150,13 @@ public class RenderableHolder {
 			break;
 		case 10:
 			image = RenderableHolder.wildrangehead_Image;
+			break;
+		case 29:
+			image = RenderableHolder.kinghead_Image;
+			break;
+		
+		case 30:
+			image = RenderableHolder.kinghead_Image;
 			break;
 		}
 		return image;
@@ -209,6 +224,14 @@ public class RenderableHolder {
 			break;
 		case 20:
 			image = RenderableHolder.wildrange2_Image;
+			break;
+		
+		case 29:
+			image = RenderableHolder.king1_Image;
+			break;
+		
+		case 30:
+			image = RenderableHolder.king2_Image;
 			break;
 		}
 		return image;
@@ -289,7 +312,11 @@ public class RenderableHolder {
 		wildrange2_Image = new Image(ClassLoader.getSystemResource(img + "wildrange2.png").toString());
 		wildmeleehead_Image = new Image(ClassLoader.getSystemResource(img + "wildmeleehead.png").toString());
 		wildrangehead_Image = new Image(ClassLoader.getSystemResource(img + "wildrangehead.png").toString());
-
+		
+		king1_Image = new Image(ClassLoader.getSystemResource(img + "king1.png").toString());
+		king2_Image = new Image(ClassLoader.getSystemResource(img + "king2.png").toString());
+		kinghead_Image = new Image(ClassLoader.getSystemResource(img + "kinghead.png").toString());
+		
 		heal_Image = new Image(ClassLoader.getSystemResource(img + "heal.png").toString());
 		meleeAttack1_Image = new Image(ClassLoader.getSystemResource(img + "meleeattack1.png").toString());
 		meleeAttack2_Image = new Image(ClassLoader.getSystemResource(img + "meleeattack2.png").toString());
