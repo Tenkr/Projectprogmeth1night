@@ -20,12 +20,22 @@ public class GameBoard implements Updatable {
 
 	public ArrayList<Fighter> Player1Fighters;
 	public ArrayList<Fighter> Player2Fighters;
+	
+	private static KingFighter P1king;
+	private static KingFighter P2king;
 
 	public GameBoard() {
 		board = new Coordinate[ROWS][COLS];
 		map = new int[ROWS][COLS];
 
 		setDefault();
+		KingFighter Player1king = new KingFighter(GameConstant.MELEE_TYPE_STRING,1);
+		KingFighter Player2king =new KingFighter(GameConstant.MELEE_TYPE_STRING,2);
+		this.P1king=Player1king;
+		this.P2king=Player2king;
+		addFighter(this.P1king,board[2][2],GameConstant.TEAM_1);
+		addFighter(this.P2king,board[2][4],GameConstant.TEAM_2);
+		
 	}
 
 	// --------------------------------------initializer
@@ -47,9 +57,8 @@ public class GameBoard implements Updatable {
 		Player2Fighters = new ArrayList<>();
 		
 		setBoardAndMap();
-///////////
-		addFighter(new KingFighter(GameConstant.MELEE_TYPE_STRING,1),board[2][2],GameConstant.TEAM_1);
-		addFighter(new KingFighter(GameConstant.MELEE_TYPE_STRING,2),board[2][4],GameConstant.TEAM_2);
+		///////////
+		
 		///////////
 	}
 
@@ -242,6 +251,11 @@ public class GameBoard implements Updatable {
 
 	public Coordinate[][] getBoard() {
 		return board;
+	}
+	
+	public static KingFighter getKing(int player) {
+		if(player==1) return P1king;
+		return P2king;
 	}
 
 	// -----------------------------------------updater---------------------------------------

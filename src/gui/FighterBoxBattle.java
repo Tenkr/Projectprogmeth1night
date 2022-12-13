@@ -13,7 +13,7 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 	public FighterBoxBattle(Fighter fighter, int symbol) {
 		super(fighter, symbol);
 		setWidth(150);
-		setHeight(120);
+		setHeight(100);
 		setImage();
 		draw();
 	}
@@ -24,15 +24,13 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 
 
 		gc.setFill(Color.DARKKHAKI);
-
-
-		gc.fillRect(0, 0, 150, 120);
-		gc.drawImage(image, 5, 5, 70, 70);
+		gc.fillRect(0, 0, 150, 100);
+		gc.drawImage(image, 5, 5, 50, 50);
 		gc.setFont(Font.font("Palatino Linotype", FontWeight.SEMI_BOLD, 20));
-		gc.strokeText(fighter.getName(), 80, 45);
+		gc.strokeText(fighter.getName(), 80, 40);
 		gc.setFill(Color.ORANGERED);
-		gc.fillRect(25, 90, 100, 20);
-		gc.strokeRect(0, 0, 150, 120);;
+		gc.fillRect(25, 70, 100, 15);
+		gc.strokeRect(0, 0, 150, 100);;
 	}
 
 	@Override
@@ -45,9 +43,9 @@ public class FighterBoxBattle extends FighterBox implements Updatable {
 		// TODO Auto-generated method stub
 		draw();
 		gc.setFill(Color.BLACK);
-		gc.fillRect(25 + (fighter.getHitPoint() / fighter.getMaxHitPoint()) * 100, 90,
-				100 - (fighter.getHitPoint() / fighter.getMaxHitPoint()) * 100, 20);
-		gc.strokeRect(0, 0, 150, 120);
+		gc.fillRect(25 + (fighter.getHitPoint() / fighter.getMaxHitPoint()) * 100, 70,
+				100 - (fighter.getHitPoint() / fighter.getMaxHitPoint()) * 100, 15);
+		gc.strokeRect(0, 0, 150, 100);
 
 	}
 

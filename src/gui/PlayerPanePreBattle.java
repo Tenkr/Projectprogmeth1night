@@ -22,7 +22,7 @@ public class PlayerPanePreBattle extends PlayerPane implements Updatable {
 		for (Fighter fighter : fighters) {
 			addFighterBox(fighter);
 		}
-		//addFighterBox(new KingFighter(GameConstant.MELEE_TYPE_STRING, player));
+		
 	}
 
 	public void addFighterBox(Fighter fighter) {

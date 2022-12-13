@@ -6,6 +6,7 @@ import entity.KingFighter;
 import entity.base.Fighter;
 import gui.base.PlayerPane;
 import javafx.scene.Node;
+import logic.GameBoard;
 import logic.GameConstant;
 import logic.GameController;
 import logic.Updatable;
@@ -16,7 +17,10 @@ public class PlayerPaneBattle extends PlayerPane implements Updatable {
 	public PlayerPaneBattle(int player) {
 		super(player);
 		fighters = new ArrayList<Fighter>();
-		//addFighters(new KingFighter(GameConstant.MELEE_TYPE_STRING, player));
+		addFighterBox( GameBoard.getKing(player));
+		//System.out.println(GameBoard.getKing(player).getSymbol());
+		System.out.println("init");
+	
 	
 	}
 
