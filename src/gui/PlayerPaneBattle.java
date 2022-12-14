@@ -18,7 +18,6 @@ public class PlayerPaneBattle extends PlayerPane implements Updatable {
 		super(player);
 		fighters = new ArrayList<Fighter>();
 		addFighterBox( GameBoard.getKing(player));
-		//System.out.println(GameBoard.getKing(player).getSymbol());
 		System.out.println("init");
 	
 	

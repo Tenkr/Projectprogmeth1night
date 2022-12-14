@@ -24,7 +24,7 @@ public class KingFighter extends Fighter implements StatsIncreasable{
 	private final int MIN_BONUS_ATTACK = 25;
 	private final int MAX_EXTRA_BONUS_ATTACK = 15;
 
-	private final int EXTRA_MOVE = 1;
+
 
 	public KingFighter(String type, int team) {
 		super(type, team);
@@ -33,7 +33,6 @@ public class KingFighter extends Fighter implements StatsIncreasable{
 	}
 
 	protected void setSpecialAbility() {
-		setTotalMoves(getTotalMoves() + EXTRA_MOVE);
 		setDodgeChance();
 	}
 

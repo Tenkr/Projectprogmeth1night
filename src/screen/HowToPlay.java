@@ -102,6 +102,14 @@ public class HowToPlay extends VBox {
 		wild_description.setFont(Font.font("Palatino Linotype", FontWeight.SEMI_BOLD, 20));
 		wild_description.setWrappingWidth(220);
 		description.addRow(row_idx++, wild_img, wild_description);
+		
+		ImageView king_img = new ImageView(RenderableHolder.king1_Image);
+        king_img.setFitWidth(175);
+        king_img.setPreserveRatio(true);
+        Text king_description = new Text("King Fighter :\n" + "This fighter buff status when king die roundover .");
+        king_description.setFont(Font.font("Palatino Linotype", FontWeight.SEMI_BOLD, 20));
+        king_description.setWrappingWidth(220);
+        description.addRow(row_idx++, king_img , king_description);
 
 		ScrollPane scrollPane = new ScrollPane();
 		scrollPane.setContent(description);

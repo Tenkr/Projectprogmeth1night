@@ -29,12 +29,7 @@ public class GameBoard implements Updatable {
 		map = new int[ROWS][COLS];
 
 		setDefault();
-		KingFighter Player1king = new KingFighter(GameConstant.MELEE_TYPE_STRING,1);
-		KingFighter Player2king =new KingFighter(GameConstant.MELEE_TYPE_STRING,2);
-		this.P1king=Player1king;
-		this.P2king=Player2king;
-		addFighter(this.P1king,board[2][2],GameConstant.TEAM_1);
-		addFighter(this.P2king,board[2][4],GameConstant.TEAM_2);
+		
 		
 	}
 
@@ -57,9 +52,14 @@ public class GameBoard implements Updatable {
 		Player2Fighters = new ArrayList<>();
 		
 		setBoardAndMap();
-		///////////
 		
-		///////////
+		KingFighter Player1king = new KingFighter(GameConstant.MELEE_TYPE_STRING,1);
+		KingFighter Player2king =new KingFighter(GameConstant.MELEE_TYPE_STRING,2);
+		this.P1king=Player1king;
+		this.P2king=Player2king;
+		addFighter(this.P1king,board[2][2],GameConstant.TEAM_1);
+		addFighter(this.P2king,board[2][4],GameConstant.TEAM_2);
+
 	}
 
 	private void setBoardAndMap() {
