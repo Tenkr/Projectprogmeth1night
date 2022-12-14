@@ -1,5 +1,7 @@
 package logic;
 
+import entity.KingFighter;
+import entity.base.Fighter;
 import gui.SimulationManager;
 
 public class GameController {
@@ -47,7 +49,29 @@ public class GameController {
 		setP1(!isP1());
 		gameBoard.resetReady();
 		gameBoard.update();
+		boolean P1kingdead = true;
+		boolean P2kingdead = true;
+		for(Fighter o1: gameBoard.Player1Fighters) {
+			if(o1 instanceof KingFighter) {
+				P1kingdead = false;
+				break;
+			}
+		}
+		for(Fighter o2 : gameBoard.Player2Fighters) {
+			if(o2 instanceof KingFighter) {
+				P2kingdead = false;
+				break;
+			}
+		}
 		if (GameController.getTurnCount() == GameConstant.MAX_TURN_PER_PLAYER * 2 + 1 && !isRoundOver) {
+			checkWinnerAtTheEnd();
+			GameController.setRoundOver(true);
+		}
+		else if(P1kingdead) {
+			checkWinnerAtTheEnd();
+			GameController.setRoundOver(true);
+		}
+		else if(P2kingdead) {
 			checkWinnerAtTheEnd();
 			GameController.setRoundOver(true);
 		}
@@ -80,7 +104,30 @@ public class GameController {
 	}
 
 	private static void checkWinnerAtTheEnd() {
-		if (gameBoard.Player1Fighters.size() > gameBoard.Player2Fighters.size()) {
+		boolean P1kingdead = true;
+		boolean P2kingdead = true;
+		for(Fighter o1: gameBoard.Player1Fighters) {
+			if(o1 instanceof KingFighter && o1.isAlive()) {
+				P1kingdead = false;
+				break;
+			}
+		}
+		for(Fighter o2 : gameBoard.Player2Fighters) {
+			if(o2 instanceof KingFighter && o2.isAlive()) {
+				P2kingdead = false;
+				break;
+			}
+		}
+		System.out.println("checkwinner");
+		if(P1kingdead) {
+			System.out.println("p1kd");
+			P2Score++;
+		}
+		else if(P2kingdead) {
+			System.out.println("p2kd");
+			P1Score++;
+		}
+		else if (gameBoard.Player1Fighters.size() > gameBoard.Player2Fighters.size()) {
 			P1Score++;
 		} else if (gameBoard.Player2Fighters.size() > gameBoard.Player1Fighters.size()) {
 			P2Score++;
